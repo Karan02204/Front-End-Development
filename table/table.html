@@ -4,6 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+
+        .table2 {
+            border-collapse: collapse;
+            border: 5px solid brown;
+        }
+        .table2 tbody tr:nth-child(even){
+            background-color: lightcoral;
+        }
+
+        .table2 tbody tr:nth-child(odd){
+            background-color: beige;
+        }
+
+        
+    </style>
 </head>
 <body>
     <table border="20" cellpadding="15" cellspacing="10" bordercolor="green" width="500" height="300" background="ronaldo.jpg" style="background-repeat: no-repeat;background-size: contain;background-position: center;">
@@ -33,6 +49,31 @@
             <tr>
                 <td>Sub2</td>
                 <td>98</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table border="2" class="table2" cellpadding = "30" cellspacing="10">
+        <thead>
+            <th>Roll No</th>;
+            <th>Name</th>
+            <th>age</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Karan</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Archita</td>
+                <td>18</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Jaideep</td>
+                <td>20</td>
             </tr>
         </tbody>
     </table>
