@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body{
+            font-family: Arial, sans-serif ;
+            margin: 0;
+            padding: 0;
+        }
+
+        .grid-container{
+            display:grid;
+            grid-template-areas:
+                "A B C"
+                "D D D"
+                "E E E";
+            grid-template-rows:auto auto auto;
+            grid-template-columns: auto auto auto;
+            height:100vh;
+        }
+
+        .A{
+            grid-area:A;
+            background-color: red;
+            text-align:center;
+            color:white;
+            padding:1rem;
+            align-content:center;
+        }
+
+        .B{
+            grid-area:B;
+            background-color: blue;
+            text-align:center;
+            color:white;
+            padding:1rem;
+            align-content:center;
+        }
+
+        .C{
+            grid-area:C;
+            background-color: green;
+            text-align:center;
+            color:white;
+            padding:1rem;
+            align-content:center;
+        }
+
+        .D{
+            grid-area:D;
+            background-color: cyan;
+            text-align:center;
+            color:white;
+            padding:1rem;
+            align-content:center;
+        }
+
+        .E{
+            grid-area:E;
+            background-color: black;
+            text-align:center;
+            color:white;
+            padding:1rem;
+            align-content:center;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="A">A</div>
+        <div class="B">B</div>
+        <div class="C">C</div>
+        <div class="D">D</div>
+        <div class="E">E</div>
+    </div>
+</body>
+</html>
