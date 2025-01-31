@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin:0;
+            padding:0;
+            background-color:whitesmoke;
+        }
+
+        .grid-container{
+            display:grid;
+            grid-template-areas:
+                "header header"
+                "sidebar main"
+                "footer footer";
+            grid-template-rows: 150px 1fr 100px;
+            grid-template-columns:auto auto;
+        }
+
+        .header{
+            grid-area:header;
+            background-color:rgb(72, 216, 72);
+            text-align:center;
+            color:white;
+            align-items: center;
+            padding:1rem;
+            font-size: 35px;
+        }
+
+        .header-home{
+            font-size: 20px;
+            text-align:center;
+            margin-top: 50px;
+
+        }
+
+        .sidebar{
+            grid-area:sidebar;
+            padding:1rem;
+            margin:1rem;
+        }
+
+        .card h2{
+            color:rgb(94, 231, 94);
+            font-size:50px;
+
+        }
+
+        .card p{
+            font-size:20px;
+        }
+        .card{
+            background-color: white;
+            border-radius:5px;
+            box-shadow:
+        2px 2px 5px rgba(0, 0, 0, 0.5);
+            padding:1rem;
+            margin:3rem;
+            width:60%;
+        }
+
+        .main{
+            grid-area:main;
+            padding:1rem;
+            width:110%;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="header">Welcome to Your Website
+            <pre class="header-home">Home    About   Contact</pre>
+        </div>
+        <div class="sidebar">
+            <div class="card">
+                <h2>About CSS</h2>
+                <p>Cascading Style Sheets(CSS) allow you to style and layout your web pages,adding colors, spacing and more.</p>
+            </div>
+            <div class="card">
+                <h2>Responsive Design</h2>
+                <p>Responsive design ensures your webpage looks great on all devices from desktop to mobile phones.</p>
+            </div>
+        </div>
+        <div class="main">
+            <div class="card">
+                <h2>HTML Basics</h2>
+                <p>HTML is the standard markup language for creating web pages.</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
