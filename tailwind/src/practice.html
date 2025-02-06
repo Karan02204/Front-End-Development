@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href = "./output.css" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-100 p-6">
+    <div class="container mx-auto">
+        <h1 class="text-3xl font-bold text-center mb-8">Tailwind CSS List Example</h1>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">Unordered List</h2>
+            <ul class="list-disc pl-6 text-gray-800">
+                <li class="mb-2">Item One</li>
+                <li class="mb-2">Item Two</li>
+                <li class="mb-2">Item Three</li>
+                <li>Item Four</li>
+            </ul>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">Ordered List</h2>
+            <ul class="list-decimal pl-6 text-gray-800">
+                <li class="mb-2">First Step</li>
+                <li class="mb-2">Second Step</li>
+                <li class="mb-2">Third Step</li>
+                <li class="mb-2">Fourth Step</li>
+            </ul>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">Custom List Style</h2>
+            <ul class="list-none  text-gray-800">
+                <li class="mb-2 flex items-center">
+                    <span class="inline-block w-4 h-4 bg-blue-500 rounded-full mr-2"></span>
+                    Custom Item One
+                </li>
+                <li class="mb-2 flex items-center">
+                    <span class="inline-block w-4 h-4 bg-green-500 rounded-full mr-2"></span>
+                    Custom Item Two
+                </li>
+                <li class="mb-2 flex items-center">
+                    <span class="inline-block w-4 h-4 bg-red-500 rounded-full mr-2"></span>
+                    Custom Item Three
+                </li>
+            </ul>
+        </section>
+    </div>
+    
+</body>
+</html>
