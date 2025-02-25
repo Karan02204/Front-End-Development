@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-100 p-6">
+    <div class="container mx-auto">
+        <h1 class="text-4xl font-extrabold text-center mb-8">Tailwind CSS Typography Example</h1>
+
+        <!-- Headings -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4">Headings</h2>
+            <h1 class="text-4xl font-extrabold mb-2">Heading 1</h1>
+            <h2 class="text-4xl font-bold mb-2">Heading 2</h2>
+        </section>
+
+        <!-- Paragraph -->
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4">Paragraphs</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                This is a Paragraph with default styling. Tailwind CSS provides utilities to control text size, color , line height, and more.
+            </p>
+            <p class="text-lg text-gray-600 leading-loose mb-4">
+                This is a larger paragraph with lighter text color and increased line height for better readablility.
+            </p>
+            <p class="text-sm text-gray-500">
+                This is a smaller paragraph with muted text color.
+            </p>
+        </section>
+
+        <!-- Blockquote  -->
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4">Blockquote</h2>
+            <blockquote class="border-l-4 border-blue-500 pl-4 italic text-gray-600">
+                "Tailwind CSS makes styling effortless and highly customizable."
+            </blockquote>
+        </section>
+
+        <!-- Inline Text Styles  -->
+
+        <section>
+            <h2 class="text-2xl font-bold mb-4">Inline Text Styles</h2>
+            <p>
+                You can style text with <span class="font-bold">bold</span>, <span class="italic">italic</span>, <span class="underline">underline</span>, and <span class="line-through">line-through</span> utilities. You can also change <span class="text-blue-500">text color</span> and <span class="bg-yellow-200">background color</span>.
+            </p>
+        </section>
+
+        <marquee behavior="scroll" direction="left">
+            <img src="shinchan-unscreen.gif" alt="Scrolling Image" class="inline-block">
+        </marquee>
+        <marquee behavior="scroll" direction="left">
+            <img src="shin-chan-dance-unscreen.gif" alt="Scrolling Image" class="inline-block">
+        </marquee>
+        <marquee behavior="scroll" direction="left">
+            <img src="shinchan-funny-unscreen.gif" alt="Scrolling Image" class="inline-block">
+        </marquee>
+
+
+    </div>
+    
+</body>
+</html>
