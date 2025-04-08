@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .highlight{color: red; font-weight: bold;}
+    </style>
+</head>
+<body>
+    <h1 id="main-title">Hello! DOM!</h1>
+    <p class="description">This is a paragraph with a class.</p>
+    <p class="description">This is another paragraph with the same class.</p>
+    <div class="container">
+        <p>Inside a container</p>
+    </div>
+    <ul>
+        <li>Item 1</li>
+        <li class="list-Item">Item 1</li>
+        <li>Item 1</li>
+    </ul>
+    <script>
+        let title = document.getElementById('main-title');
+        console.log(title.textContent);
+
+        let description = document.getElementsByClassName('description');
+        console.log(description[0].textContent);
+
+        let paragraphs = document.getElementsByTagName('p');
+        console.log(paragraphs.length);
+
+        let firstItem = document.querySelector("ul li");
+        console.log(firstItem.textContent);
+
+        let listItems = document.querySelectorAll("ul li");
+        listItems.forEach(item => console.log(item.textContent));
+
+        title.textContent = "DOM Manipulation in Action!";
+        title.style.color = "blue";
+
+        firstItem.classList.add('highlight');
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .highlight{color: red; font-weight: bold;}
+    </style>
+</head>
+<body>
+    <h1 id="title">Hello! World!</h1>
+    <img src="shinchan_01.jpg" id="image" alt="Shinchan" width="300" height="600" style="object-fit:cover">
+    <p class="description">This is a simple paragraph</p>
+    <button id="changeContentBtn">Change Content</button>
+    <button id="changeAttrBtn">Change Image</button>
+    <button id="changeStyleBtn">Change Style</button>
+    <button id="toggleClassBtn">Toggle highlight</button>
+    <button id="eventBtn">Click Me</button>
+    <script>
+        const title = document.getElementById('title');
+        const image = document.getElementById('image');
+        const description = document.querySelector('.description');
+        const eventBtn = document.getElementById('eventBtn');
+
+        document.getElementById("changeContentBtn").addEventListener("click",()=>{
+            title.textContent = "Welcome To javascript";
+            description.innerHTML = "<strong>Updated paragraph content</strong>";
+        });
+
+        const images = [
+            { src: "shinchan_01.jpg", alt: "Shinchan Image 1" },
+            { src: "shinchan_02.jpg", alt: "Shinchan Image 2" },
+            { src: "shinchan_03.jpg", alt: "Shinchan Image 3" },
+            { src: "shinchan_04.jpg", alt: "Shinchan Image 4" },
+            { src: "shinchan_05.jpg", alt: "Shinchan Image 5" },
+            { src: "shinchan_06.jpg", alt: "Shinchan Image 6" },
+            { src: "shinchan_07.jpg", alt: "Shinchan Image 7" }
+        ];
+        let currentIndex = 0;
+
+        document.getElementById("changeAttrBtn").addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % images.length;
+            image.src = images[currentIndex].src;
+            image.alt = images[currentIndex].alt;
+
+            // Set unique height and width for each image
+            const dimensions = [
+            { width: 300, height: 600 },
+            { width: 300, height: 600 },
+            { width: 400, height: 700 },
+            { width: 450, height: 750 },
+            { width: 400, height: 700 },
+            { width: 400, height: 700 },
+            { width: 400, height: 700 }
+            ];
+            image.width = dimensions[currentIndex].width;
+            image.height = dimensions[currentIndex].height;
+        });
+
+        document.getElementById("changeStyleBtn").addEventListener("click", () => {
+            title.style.color = "red";
+            title.style.fontSize = "20px";
+            title.style.fontWeight = "bold";
+        });
+
+        document.getElementById("toggleClassBtn").addEventListener("click", () => {
+            description.classList.toggle('highlight');
+        });
+
+        eventBtn.addEventListener("click", () => {
+            alert("Button clicked!");
+        });
+    </script>
+</body>
+</html>

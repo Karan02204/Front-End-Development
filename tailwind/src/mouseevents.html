@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gradient-to-tr from-green-600 to-blue-600 min-h-screen flex flex-col justify-center items-center">
+    <div class="p-50 rounded-2xl mb-5 outline-none hover:ring-2 hover:ring-green-500" id="box" class="">Hover or Click</div>
+    <div class="p-10 rounded-2xl bg-white text-center font-bold text-black">
+        <p id="message">Mouse event info will appear here.</p>
+    </div>
+    
+
+    <script>
+        const box = document.getElementById("box");
+        const message = document.getElementById("message");
+
+        box.addEventListener("click", () => {
+            box.style.backgroundColor = "lightcoral";
+            message.textContent = "Box Clicked";
+        });
+
+        box.addEventListener("dblclick", () => {
+            message.textContent = "Box Double Clicked!";
+            box.style.backgroundColor = "orange";
+        });
+
+        box.addEventListener("mouseover" , () => {
+            message.textContent = "Mouse Over the Box!";
+            box.style.backgroundColor = "lightgreen";
+        });
+
+        box.addEventListener("mouseout", () => {
+            message.textContent = "Mouse Left the Box!";
+            box.style.backgroundColor = "lightblue";
+        });
+
+        box.addEventListener("mousemove" , (event) => {
+            message.textContent = `Mouse moved at X: ${event.offsetX}, Y: ${event.offsetY}`;
+        });
+    </script>
+</body>
+</html>

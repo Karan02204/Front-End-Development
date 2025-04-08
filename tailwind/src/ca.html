@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gradient-to-tr from-black to-purple-500 h-screen flex justify-center py-20">
+    <div class="container max-w-md h-180">
+        <div class="bg-white shadow-[0_0_15px_#ff00ff] rounded-2xl h-180 w-200">
+            <div class="w-full flex flex-col items-center justify-center py-10">
+                <h1 class="text-4xl font-bold text-black">Log In</h1>
+                <p class="text-2xl font-semibold text-gray-500 mt-2">Don't have an account? <span class="text-2xl font-semibold text-blue-500 ml-1">Sign Up</span></p>
+            </div>
+            <div class="h-140 w-full flex justify-evenly">
+                <div class="w-full pt-10 pl-10 pr-2">
+                    <label for="email" class="font-semibold text-xl">Email</label>
+                    <input type="email" id="email" class="w-full h-10 bg-white border-b-2 border-dotted border-b-gray-300 mt-1" placeholder="admin@mystunningwebsite.com">
+                    <div class="flex">
+                        <input type="checkbox" id="remember" class="mt-4 border-1 border-gray-400 rounded-2xl">
+                        <label for="remember" class="text-lg font-light text-black mt-4 ml-2 whitespace-nowrap">Remember me</label>
+                        <span class="text-lg font-light text-black mt-4 ml-40 whitespace-nowrap">Forget Email?</span>
+                    </div>
+                    <button class="w-full h-10 bg-blue-500 text-white font-semibold text-xl mt-10 rounded-2xl">Continue with Email ></button>
+                </div>
+                <div class="w-full">
+                    <button class="w-70 h-10 bg-red-500 text-white font-semibold px-10 py-2 text-xl mt-10 ml-5 mx-1 flex items-center justify-center whitespace-nowrap">
+                        <img src="https://img.icons8.com/?size=100&id=110560&format=png&color=000000" alt="Google" class="w-12 h-12 mr-2">
+                        Continue with Google
+                    </button>
+                    <button class="w-70 h-10 bg-blue-500 text-white font-semibold text-xl mt-10 mx-1 ml-5 flex items-center justify-center whitespace-nowrap">
+                        <img src="https://img.icons8.com/?size=100&id=msQ6HdxpqUmi&format=png&color=000000" alt="Google" class="w-11 h-11 mr-2">
+                        Continue with Facebook</button>
+                    <button class="w-70 h-10 bg-gray-500 text-white font-semibold text-xl mt-10 mx-1 ml-5 flex items-center justify-center whitespace-nowrap">
+                        <img src="https://img.icons8.com/?size=100&id=118985&format=png&color=000000" alt="Google" class="w-11 h-11 mr-2">
+                        Continue with Apple</button>
+                    <div class="flex items-center justify-center mt-1 mr-5">
+                        <span class="text-lg font-light text-black mt-10 ml-5 text-center">Conitnue with SSO</span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

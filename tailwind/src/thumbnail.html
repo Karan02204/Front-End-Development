@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <h1 class="text-5xl font-bold text-center">Thumbnail Preview & LightBox</h1>
+    <div id="gallery">
+
+    </div>
+
+    <div id="lightbox">
+        <img id="lightboxImage" src="" alt="">
+    </div>
+
+    <script>
+
+        const imageSources = [
+            "shinchan_01.jpg",
+            "shinchan_02.jpg",
+            "shinchan_03.jpg",
+            "shinchan_04.jpg",
+            "shinchan_05.jpg",
+            "shinchan_06.jpg",
+            "shinchan_07.jpg"
+        ];
+
+        const gallery = document.getElementById("gallery");
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImage = document.getElementById("lightboxImage");
+
+
+        function createGallery(){
+            imageSources.forEach(src => {
+                const img = document.createElement("img");
+                img.src = src;
+                img.alt = "Shinchan Image";
+                img.addEventListener("click", function() {
+                    lightboxImage.src = src;
+                    lightbox.style.display = "flex";
+                });
+                gallery.appendChild(img);
+            });
+        }
+
+        lightbox.addEventListener("click", function(){
+            lightbox.style.display = "none";
+        });
+
+        createGallery();
+    </script>
+</body>
+</html>

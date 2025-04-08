@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Interactive Image Gallery</h2>
+    <div id="gallery">
+
+    </div>
+
+    <div id="preview">
+        <p>Click an image to preview</p>
+        <img src="" id="largeImage" alt="Preview will appear here">
+    </div>
+
+    <script>
+        const imageSources = [
+            "shinchan_01.jpg",
+            "shinchan_02.jpg",
+            "shinchan_03.jpg",
+            "shinchan_04.jpg",
+            "shinchan_05.jpg",
+            "shinchan_06.jpg",
+            "shinchan_07.jpg"
+        ]
+
+        const gallery = document.getElementById("gallery");
+        const largeImage = document.getElementById("largeImage");
+
+        function createGallery(){
+            imageSources.forEach(src => {
+                const img = document.createElement("img");
+                img.src = src;
+                img.alt = "Shinchan Image";
+                img.addEventListener("click", () =>{
+                    largeImage.src = src;
+                });
+                gallery.appendChild(img);
+            })
+        }
+
+        createGallery();
+    </script>
+</body>
+</html>

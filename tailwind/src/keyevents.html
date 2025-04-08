@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Press Any Key</h2>
+    <div id="box">Key Event Info</div>
+    <p id="message"></p>
+    <script>
+        const box = document.getElementById('box');
+        const message = document.getElementById('message');
+
+        document.addEventListener('keydown', (event) => {
+            box.style.backgroundColor = "yellow";
+            message.textContent = `Key Down: ${event.key} | Code: ${event.code}`;
+        });
+
+        document.addEventListener('keypress',(event)=>{
+            box.style.backgroundColor = "lightblue";
+            message.textContent = `Key Pressed: ${event.key} | Code: ${event.code}`;
+        });
+
+        document.addEventListener('keyup',(event)=>{
+            box.style.backgroundColor = "lightgreen";
+            message.textContent = `Key Up: ${event.key} | Code: ${event.code}`;
+        });
+    </script>
+</body>
+</html>

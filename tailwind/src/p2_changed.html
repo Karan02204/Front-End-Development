@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Webpage</title>
+    <link href="./output.css" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gradient-to-tr from-black to-red-500 min-h-screen flex flex-col">
+
+    <!-- Navbar -->
+    <nav class="bg-black/60">
+        <ul class="flex flex-wrap justify-center p-4">
+            <li class="px-5 py-2 text-red-500 text-lg sm:text-xl md:text-2xl">Home</li>
+            <li class="px-5 py-2 text-red-500 text-lg sm:text-xl md:text-2xl">About</li>
+            <li class="px-5 py-2 text-red-500 text-lg sm:text-xl md:text-2xl">Projects</li>
+            <li class="px-5 py-2 text-red-500 text-lg sm:text-xl md:text-2xl">Contact</li>
+        </ul>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="flex-grow flex justify-center items-center p-5">
+        <div class="rounded-3xl w-full max-w-4xl bg-white/10 backdrop-blur-lg border border-white/20 shadow-[0_0_15px_#ff1a1a] p-5">
+            
+            <!-- Header -->
+            <div class="w-full mb-8 text-center">
+                <h1 class="text-2xl sm:text-3xl md:text-4xl text-white font-bold">Build your own WEB presence:</h1>
+            </div>
+            
+            <!-- Cards Container -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Card 1 -->
+                <div class="rounded-3xl bg-black/40 flex flex-col sm:flex-row items-center p-5 space-y-4 sm:space-y-0 sm:space-x-5">
+                    <div class="flex justify-center items-center w-16 h-16 bg-red-500 rounded-full text-white text-2xl font-bold">1</div>
+                    <div class="flex flex-col text-center sm:text-left">
+                        <h1 class="text-white text-xl sm:text-2xl font-semibold">XYZ</h1>
+                        <p class="text-white text-sm">LPU JALANDHAR</p>
+                        <p class="text-white text-sm">INDIA</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="rounded-3xl bg-black/40 flex flex-col sm:flex-row items-center p-5 space-y-4 sm:space-y-0 sm:space-x-5">
+                    <div class="flex justify-center items-center w-16 h-16 bg-red-500 rounded-full text-white text-2xl font-bold">2</div>
+                    <div class="flex flex-col text-center sm:text-left">
+                        <h1 class="text-white text-xl sm:text-2xl font-semibold">LANGUAGES</h1>
+                        <p class="text-white text-sm">HTML</p>
+                        <p class="text-white text-sm">CSS</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
