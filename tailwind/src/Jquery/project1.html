@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Mini Project</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial;
+            margin:20px;
+        }
+
+        .hidden {
+            display:none;
+        }
+
+        #successMsg {
+            color: green;
+             font-weight: bold;
+        }
+
+        #charCount{
+            font-size: 0.9rem;
+            color:gray;
+        }
+    </style>
+</head>
+<body>
+    <h2>Feedback Form</h2>
+    <form id="feedbackForm">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name"><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email"><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" rows="5" cols="30"></textarea><br>
+        <span id="charCount">0 characters</span><br><br>
+
+        <button type="submit" id="submitBtn">Submit</button>
+        <button type="button" id="resetBtn">Reset</button>
+    </form>
+
+    <div id="successMsg" class="hidden">Thank you for your feedback!</div>
+
+    <script>
+        $(document).ready(function(){
+
+            $("#message").on("input",function(){
+                let count = $(this).val().length;
+                $("#charCount").text(count + " characters");
+            });
+
+            $("#feedbackForm").submit(function(e) {
+                e.preventDefault(); // Prevent form submission
+
+                let allInputs = $("#feedbackForm: input").not(":button");
+                let isEmpty = false;
+                allInputs.each(function() {
+                    if ($(this).val().trim() === "") {
+                        isEmpty = true;
+                        $(this).css("border","2px solid red");
+                    } else{
+                        $(this).css("border", "");
+                    }
+                });
+
+                if(isEmpty){
+                    alert("Please fill out all fields");
+                    return;
+                }
+
+
+                $("#feedbackForm").slideUp();
+                $("#successMsg").removeClass("hidden").fadeIn();
+            });
+
+
+            $("#resetBtn").click(function(){
+
+                $("#feedbackForm :input").not(":button").val("").css("border", "");
+                $("#charCount").text("0 characters");
+            });
+
+            $("#name").focus(function(){
+                $(this).css("background-color", "#e0f7fa");
+            }).blur(function(){
+                $(this).css("background-color", "");
+            });
+        });
+    </script>
+</body>
+</html>

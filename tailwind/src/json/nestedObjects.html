@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple JSON Example</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+        }
+
+        .box {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>User data from JSON</h2>
+    <div id="output"></div>
+    <script>
+        const users = [
+            {
+                name: "Alice",
+                age: 28,
+                address: {
+                    city: "New York",
+                    zip: "10001"
+                },
+                hobbies: ["Tracking", "Swimming"]
+            },
+            
+            {
+                name: "Bob",
+                age: 32,
+                address: {
+                    city: "Los Angles",
+                    zip: "90001"
+                },
+                hobbies: ["Gaming", "Cycling"]
+            }
+        ];
+        
+        const outputDiv = document.getElementById("output");
+        users.forEach(user => {
+            const userDiv = document.createElement("div");
+            userDiv.className = "box";
+            userDiv.innerHTML = `
+                <strong>Name:</strong> ${user.name} <br>
+                <strong>Age:</strong> ${user.age} <br>
+                <strong>City:</strong> ${user.address.city} <br>
+                <strong>Zip:</strong> ${user.address.zip} <br>
+                <strong>Hobbies:</strong> ${user.hobbies.join(", ")}
+            `;
+            outputDiv.appendChild(userDiv);
+        });
+    </script>
+</body>
+</html>
